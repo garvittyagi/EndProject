@@ -1,4 +1,4 @@
-﻿@model IEnumerable<EndProject.Models.Category>
+﻿@model IEnumerable<EndProject.Models.Dealers>
 
 @{
     ViewData["Title"] = "Index";
@@ -6,14 +6,13 @@
 }
 <style>
     body {
-        background-image: url(./images/Categories.jpg);
+        background-image: url(./images/dealer.jfif);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
     }
 </style>
-
-<h1>Categories</h1>
+<h1>Index</h1>
 
 <p>
     <a asp-action="Create"
@@ -26,10 +25,13 @@
                 @Html.DisplayNameFor(model => model.Name)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DisplayOrder)
+                @Html.DisplayNameFor(model => model.Email)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CreatedDateTime)
+                @Html.DisplayNameFor(model => model.password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehicle)
             </th>
             <th></th>
         </tr>
@@ -41,10 +43,13 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DisplayOrder)
+                @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CreatedDateTime)
+                @Html.DisplayFor(modelItem => item.password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vehicle.Manufacturer)
             </td>
             <td>
                     <div class="w-35 btn-group" role="group">

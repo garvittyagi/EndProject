@@ -1,8 +1,39 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<style>
+    body {
+        background-image: url(./images/background.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+
+    }
+
+    .btn {
+        display: block;
+        padding-top: 240px;
+        width: 100%;
+        border: none;
+        background-color: black;
+        padding: 14px 18px;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+        color: white;
+    }
+</style>
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome To Vehicle Management System</h1>
+    <p>Click the below button for adding a new Vehicle</p>
+</div>
+
+
+<div>
+    <div>
+        <p>
+            <a class="btn btn-info" href="./Vehicles/Create">Add Vehicle</a>
+        </p>
+    </div>
 </div>

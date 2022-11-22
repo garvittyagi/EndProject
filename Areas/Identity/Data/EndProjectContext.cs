@@ -18,6 +18,8 @@ public class EndProjectContext : IdentityDbContext<EndProjectUser>
 
     public DbSet<Vehicle> Vehicles { get; set; }
 
+    public DbSet<Dealers> Dealers { get; set; }
+
 }
 
     //protected override void OnModelCreating(ModelBuilder builder)

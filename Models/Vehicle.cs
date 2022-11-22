@@ -19,17 +19,17 @@ namespace EndProject.Models
         [Required]
         [Display(Name = "List Price")]
         public double ListPrice { get; set; }
-        [ValidateNever]
+        
 
         [Required]
         [Display(Name = "Category")]
         public int CategoryId { get; set; }
-        [ValidateNever]
+        
         public Category Category { get; set; }
         [Required]
         [Display(Name = "Engine Type")]
         public int EngineTypeId { get; set; }
-        [ValidateNever]
+        
         public EngineType EngineType { get; set; }
     }
 }

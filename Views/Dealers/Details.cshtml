@@ -1,14 +1,14 @@
-﻿@model EndProject.Models.Category
+﻿@model EndProject.Models.Dealers
 
 @{
     ViewData["Title"] = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
+@*<h1>Details</h1>*@
 
 <div>
-    <h3>@Html.DisplayFor(model => model.Name) Category</h3>
+    <h2>@Html.DisplayFor(model => model.Name) Details</h2>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -18,16 +18,22 @@
             @Html.DisplayFor(model => model.Name)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DisplayOrder)
+            @Html.DisplayNameFor(model => model.Email)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DisplayOrder)
+            @Html.DisplayFor(model => model.Email)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CreatedDateTime)
+            @Html.DisplayNameFor(model => model.password)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CreatedDateTime)
+            @Html.DisplayFor(model => model.password)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Vehicle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Vehicle.Manufacturer)
         </dd>
     </dl>
 </div>
@@ -36,3 +42,8 @@
        class="btn btn-primary mx-2"> <i class="bi bi-pencil-square"></i>>Edit</a> |
     <a asp-action="Index" class="btn btn-info">Back to List</a>
 </div>
+
+@*<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>*@

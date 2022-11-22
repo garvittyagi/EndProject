@@ -4,11 +4,20 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<style>
+    body {
+        background-image: url(./images/engine.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
 
-<h1>Index</h1>
+<h1>Engine Types</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create"
+       class="btn btn-primary mx-2"> <i class="bi bi-plus-circle"></i>>Create New</a>
 </p>
 <table class="table">
     <thead>
