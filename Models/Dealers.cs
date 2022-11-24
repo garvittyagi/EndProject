@@ -14,7 +14,7 @@ namespace EndProject.Models
 
         public string password { get; set; }
 
-        [ValidateNever]
+        
 
         [Required]
         [Display(Name = "Manufacturer")]

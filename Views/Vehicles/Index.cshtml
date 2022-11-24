@@ -46,30 +46,31 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Mileage)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Manufacturer)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ListPrice)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EngineType.Name)
-            </td>
-            <td>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mileage)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Manufacturer)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ListPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EngineType.Name)
+                </td>
+                <td>
                     <div class="w-35 btn-group" role="group">
                         <a asp-action="Edit" asp-route-id="@item.Id"
                        class="btn btn-primary mx-2"> <i class="bi bi-pencil-square"></i>>Edit</a> |
@@ -78,8 +79,8 @@
                         <a asp-action="Delete" asp-route-id="@item.Id"
                        class="btn btn-danger mx-2"> <i class="bi bi-trash-fill"></i>>Delete</a>
                     </div>
-            </td>
-        </tr>
-}
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

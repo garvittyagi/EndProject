@@ -18,18 +18,19 @@ namespace EndProject.Models
         public string Manufacturer { get; set; }
         [Required]
         [Display(Name = "List Price")]
+        [Range(1, 10000000, ErrorMessage = "Price must be between 1 and 10000000 only!!")]
         public double ListPrice { get; set; }
         
 
         [Required]
         [Display(Name = "Category")]
         public int CategoryId { get; set; }
-        
+        [ValidateNever]
         public Category Category { get; set; }
         [Required]
         [Display(Name = "Engine Type")]
         public int EngineTypeId { get; set; }
-        
+        [ValidateNever]
         public EngineType EngineType { get; set; }
     }
 }
